@@ -1,25 +1,37 @@
+const STATIC_CACHE = "static-cache-v2";
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
-  "style.css",
-  "index.js",
-  "manifest.webmanifest",
+  "/app.js",
+  "/styleS.css",
+  "/index.js",
+  "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
   "/icons/icon-192x192.png",
   "/icons/icon-512x512.png",
 ];
-
-const STATIC_CACHE = "static-cache-v2";
-const DATA_CACHE = "data-cache-v1";
-
-// Install
-// =========================================
-
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    cache.open(STATIC_CACHE).then((cache) => {
-      console.log("Files chached succesfully!");
+//Install service worker
+//=========================================
+self.addEventListener("install", (evt) => {
+  //   console.log("Service worker has been installed!");
+  evt.waitUntil(
+    caches.open(STATIC_CACHE).then((cache) => {
+      console.log("your files were cache!");
       return cache.addAll(FILES_TO_CACHE);
     })
   );
-  self.skipwaiting();
+  //self.skipWaiting()
+});
+
+//Activate service worker
+//=========================================
+
+self.addEventListener("activate", (evt) => {
+  //   console.log("Service worker had been activated!");
+});
+
+//Fetch request
+//=========================================
+
+self.addEventListener("fetch", (evt) => {
+  //   console.log("Fetch event", evt);
 });
