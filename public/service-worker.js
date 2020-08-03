@@ -15,7 +15,7 @@ self.addEventListener("install", (evt) => {
   //   console.log("Service worker has been installed!");
   evt.waitUntil(
     caches.open(STATIC_CACHE).then((cache) => {
-      console.log("your files were cache!");
+      console.log("your files were cached!");
       return cache.addAll(FILES_TO_CACHE);
     })
   );
@@ -27,6 +27,14 @@ self.addEventListener("install", (evt) => {
 
 self.addEventListener("activate", (evt) => {
   //   console.log("Service worker had been activated!");
+  evt.waitUntil(
+    caches.keys().then((keys) => {
+      // console.log(keys)
+      return Promise.all(keys.
+        .filter(key => key !== STATIC_CACHE)
+        .map(key => caches.delete(key)))
+    })
+  );
 });
 
 //Fetch request
@@ -34,4 +42,9 @@ self.addEventListener("activate", (evt) => {
 
 self.addEventListener("fetch", (evt) => {
   //   console.log("Fetch event", evt);
+  evt.respondWith(
+    caches.match(evt.request).then((cacheRes) => {
+      return cacheRes || fetch(evt.request);
+    })
+  );
 });
