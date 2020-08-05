@@ -1,61 +1,54 @@
-# Unit 18 PWA Homework: Online/Offline Budget Trackers
-
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
-
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
-
-Offline Functionality:
-
-  * Enter deposits offline
-
-  * Enter expenses offline
-
-When brought back online:
-
-  * Offline entries should be added to tracker.
-
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
-
-## Business Context
-
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+# Budget Tracker
 
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+![GitHub repo size](https://img.shields.io/github/repo-size/musicman785/Budget_Tracker?logo=github)
 
-- - -
+![GitHub top language](https://img.shields.io/github/languages/top/musicman785/Budget_Tracker?color=%230f0&logo=github&logoColor=%230f0)
 
-## Commit Early and Often
+![GitHub language count](https://img.shields.io/github/languages/count/musicman785/Budget_Tracker?color=%23b22&logo=github&logoColor=%23b22)
 
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+[Link to App](https://glacial-caverns-54725.herokuapp.com/)
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+Client side application that records Budget transactions.
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+# Technology Used
 
-* Follow these guidelines for committing:
+> 1. Javascript
+> 2. Nodejs
+> 3. MongoDB
+> 4. Expressjs
+> 5. Morgan
+> 6. HTML
+> 7. CSS
 
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+# Table of Contents
 
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+- [Instructions](#instructions)
+- [Example Gif](#example-gif)
+- [Contributors](#contributors)
+- [Acknowledgements](#acknowlegments)
+- [Author](#author)
 
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
+## Instructions
 
-  * Test your application before you commit to ensure functionality at every step in the development process
+> In your browser, navigate to https://glacial-caverns-54725.herokuapp.com/. When the window opens, Begin by depositing funds to the Budget tracker. You will not see the funds or graph change after the initial deposit, however, funds are there. Then, begin to deduct funds as needed, you will see the app change funds and graph after the first deduction. Application will work even if offline. Once back online, the app will adjust funds for whatever transactions were run while online.
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+# Example Gif:
 
-## Submission on BCS
+![](public/images/budgetgif.gif)
 
-* You are required to submit the following:
+## Contributors
 
-  * the URL to the deployed application
+[musicman785](http://github.com/musicman785)
 
-  * the URL to the Github repository
+## Author
 
+![ProfileImage](https://avatars2.githubusercontent.com/u/62310334?v=4)
+
+**musicman785**
+
+Email: null
+
+Location: Los Angeles
+
+Github: https://github.com/musicman785
